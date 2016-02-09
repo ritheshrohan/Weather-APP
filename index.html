@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="weatherApp" ng-controller="weatherController">
+  <head>
+    <title></title>
+   
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/app.js"></script>
+
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Font Awesone CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/style.css">
+
+
+  </head>
+
+  <body>
+    
+       
+<div class="container-fluid">
+  
+  <center>
+  <span id="lead">Weather App</span>
+  </center> 
+
+  <br />
+  <br />
+<!-- Row 1, 3 cities -->
+  <div class="row">
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class0" >
+  <div class="panel-body">
+    	
+    	<div class="form-inline">  
+  	<form>
+  	
+  	<input ng-model="search0" 
+  		type="text" 
+  		class="form-control" 
+  		placeholder="Enter City Name" 
+  		/>
+  	<button class="btn btn-info pull-right" ng-click="fetch(0)"> Search</button></p> 
+  </form>
+
+  		</div> <!-- End of inline form-->
+  
+    <br />
+	
+<div ng-if="details0"> <!-- If details object has arrived, then Show-->
+
+	<div class="row">  	
+  	<div class="col-md-7">
+  	<ul >
+<li>{{details0.name}}, {{details0.sys.country}}</li>
+<br />
+<li><b>{{details0.weather[0].description}}</b></li>
+
+  	</ul>
+  	</div>
+
+  	<div class="col-md-5">
+  	<p>{{details0.main.temp}} &#8451;</p>
+  	</div>
+
+  	</div> <!--End of row -->
+  	</div> <!--end of IF DETAILS AVAILABLE -->
+
+  	</div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+
+<!-- 2nd panel -->
+
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class1" >
+  <div class="panel-body">
+    	
+    	<div class="form-inline">  
+  	<form>
+  	
+  	<input ng-model="search1" 
+  		type="text" 
+  		class="form-control" 
+  		placeholder="Enter City Name" 
+  		/>
+  	<button class="btn btn-info pull-right" ng-click="fetch(1)"> Search</button></p> 
+  </form>
+
+  		</div> <!-- End of inline form-->
+  
+    <br />
+	
+<div ng-if="details1"> <!-- If details object has arrived, then Show-->
+
+	<div class="row">  	
+  	<div class="col-md-7">
+  	<ul >
+<li>{{details1.name}}, {{details1.sys.country}}</li>
+<br />
+<li><b>{{details1.weather[0].description}}</b></li>
+
+  	</ul>
+  	</div>
+
+  	<div class="col-md-5">
+  	<p>{{details1.main.temp}} &#8451;</p>
+  	</div>
+
+  	</div> <!--End of row -->
+  	</div> <!--end of IF DETAILS AVAILABLE -->
+
+  	</div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+<!-- 3rd panel-->
+
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class2" >
+  <div class="panel-body">
+    	
+    	<div class="form-inline">  
+  	<form>
+  	
+  	<input ng-model="search2" 
+  		type="text" 
+  		class="form-control" 
+  		placeholder="Enter City Name" 
+  		/>
+  	<button class="btn btn-info pull-right" ng-click="fetch(2)"> Search</button></p> 
+  </form>
+
+  		</div> <!-- End of inline form-->
+  
+    <br />
+	
+<div ng-if="details2"> <!-- If details object has arrived, then Show-->
+
+	<div class="row">  	
+  	<div class="col-md-7">
+  	<ul >
+<li>{{details2.name}}, {{details2.sys.country}}</li>
+<br />
+<li><b>{{details2.weather[0].description}}</b></li>
+
+  	</ul>
+  	</div>
+
+  	<div class="col-md-5">
+  	<p>{{details2.main.temp}} &#8451;</p>
+  	</div>
+
+  	</div> <!--End of row -->
+  	</div> <!--end of IF DETAILS AVAILABLE -->
+
+  	</div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+	</div> <!-- End of main row-->
+	
+
+  <!-- ...........................2nd row............. -->
+
+<!-- Row 1, 3 cities -->
+  <div class="row">
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class3" >
+  <div class="panel-body">
+      
+      <div class="form-inline">  
+    <form>
+    
+    <input ng-model="search3" 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter City Name" 
+      />
+    <button class="btn btn-info pull-right" ng-click="fetch(3)"> Search</button></p> 
+  </form>
+
+      </div> <!-- End of inline form-->
+  
+    <br />
+  
+<div ng-if="details3"> <!-- If details object has arrived, then Show-->
+
+  <div class="row">   
+    <div class="col-md-7">
+    <ul >
+<li>{{details3.name}}, {{details3.sys.country}}</li>
+<br />
+<li><b>{{details3.weather[0].description}}</b></li>
+
+    </ul>
+    </div>
+
+    <div class="col-md-5">
+    <p>{{details3.main.temp}} &#8451;</p>
+    </div>
+
+    </div> <!--End of row -->
+    </div> <!--end of IF DETAILS AVAILABLE -->
+
+    </div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+
+<!-- 2nd panel -->
+
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class4" >
+  <div class="panel-body">
+      
+      <div class="form-inline">  
+    <form>
+    
+    <input ng-model="search4" 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter City Name" 
+      />
+    <button class="btn btn-info pull-right" ng-click="fetch(4)"> Search</button></p> 
+  </form>
+
+      </div> <!-- End of inline form-->
+  
+    <br />
+  
+<div ng-if="details4"> <!-- If details object has arrived, then Show-->
+
+  <div class="row">   
+    <div class="col-md-7">
+    <ul >
+<li>{{details4.name}}, {{details4.sys.country}}</li>
+<br />
+<li><b>{{details4.weather[0].description}}</b></li>
+
+    </ul>
+    </div>
+
+    <div class="col-md-5">
+    <p>{{details4.main.temp}} &#8451;</p>
+    </div>
+
+    </div> <!--End of row -->
+    </div> <!--end of IF DETAILS AVAILABLE -->
+
+    </div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+<!-- 3rd panel-->
+
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class5" >
+  <div class="panel-body">
+      
+      <div class="form-inline">  
+    <form>
+    
+    <input ng-model="search5" 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter City Name" 
+      />
+    <button class="btn btn-info pull-right" ng-click="fetch(5)"> Search</button></p> 
+  </form>
+
+      </div> <!-- End of inline form-->
+  
+    <br />
+  
+<div ng-if="details5"> <!-- If details object has arrived, then Show-->
+
+  <div class="row">   
+    <div class="col-md-7">
+    <ul >
+<li>{{details5.name}}, {{details5.sys.country}}</li>
+<br />
+<li><b>{{details5.weather[0].description}}</b></li>
+
+    </ul>
+    </div>
+
+    <div class="col-md-5">
+    <p>{{details5.main.temp}} &#8451;</p>
+    </div>
+
+    </div> <!--End of row -->
+    </div> <!--end of IF DETAILS AVAILABLE -->
+
+    </div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+  </div> <!-- End of main row-->
+
+  <!-- ..................3rd row................... -->
+<!-- Row 1, 3 cities -->
+  <div class="row">
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class6" >
+  <div class="panel-body">
+      
+      <div class="form-inline">  
+    <form>
+    
+    <input ng-model="search6" 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter City Name" 
+      />
+    <button class="btn btn-info pull-right" ng-click="fetch(6)"> Search</button></p> 
+  </form>
+
+      </div> <!-- End of inline form-->
+  
+    <br />
+  
+<div ng-if="details6"> <!-- If details object has arrived, then Show-->
+
+  <div class="row">   
+    <div class="col-md-7">
+    <ul >
+<li>{{details6.name}}, {{details6.sys.country}}</li>
+<br />
+<li><b>{{details6.weather[0].description}}</b></li>
+
+    </ul>
+    </div>
+
+    <div class="col-md-5">
+    <p>{{details6.main.temp}} &#8451;</p>
+    </div>
+
+    </div> <!--End of row -->
+    </div> <!--end of IF DETAILS AVAILABLE -->
+
+    </div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+
+<!-- 2nd panel -->
+
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class7" >
+  <div class="panel-body">
+      
+      <div class="form-inline">  
+    <form>
+    
+    <input ng-model="search7" 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter City Name" 
+      />
+    <button class="btn btn-info pull-right" ng-click="fetch(7)"> Search</button></p> 
+  </form>
+
+      </div> <!-- End of inline form-->
+  
+    <br />
+  
+<div ng-if="details7"> <!-- If details object has arrived, then Show-->
+
+  <div class="row">   
+    <div class="col-md-7">
+    <ul >
+<li>{{details7.name}}, {{details7.sys.country}}</li>
+<br />
+<li><b>{{details7.weather[0].description}}</b></li>
+
+    </ul>
+    </div>
+
+    <div class="col-md-5">
+    <p>{{details7.main.temp}} &#8451;</p>
+    </div>
+
+    </div> <!--End of row -->
+    </div> <!--end of IF DETAILS AVAILABLE -->
+
+    </div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+<!-- 3rd panel-->
+
+
+      <div class="col-md-4">
+        
+
+        <div class="panel panel-default" ng-class="class8" >
+  <div class="panel-body">
+      
+      <div class="form-inline">  
+    <form>
+    
+    <input ng-model="search8" 
+      type="text" 
+      class="form-control" 
+      placeholder="Enter City Name" 
+      />
+    <button class="btn btn-info pull-right" ng-click="fetch(8)"> Search</button></p> 
+  </form>
+
+      </div> <!-- End of inline form-->
+  
+    <br />
+  
+<div ng-if="details8"> <!-- If details object has arrived, then Show-->
+
+  <div class="row">   
+    <div class="col-md-7">
+    <ul >
+<li>{{details8.name}}, {{details8.sys.country}}</li>
+<br />
+<li><b>{{details8.weather[0].description}}</b></li>
+
+    </ul>
+    </div>
+
+    <div class="col-md-5">
+    <p>{{details8.main.temp}} &#8451;</p>
+    </div>
+
+    </div> <!--End of row -->
+    </div> <!--end of IF DETAILS AVAILABLE -->
+
+    </div><!-- End of panel body-->
+</div> <!-- End of panel default-->
+</div> <!-- End of col-md-4-->
+
+
+  </div> <!-- End of main row-->
+
+
+	</div> <!-- End of container-->     
+  </body>
+</html>

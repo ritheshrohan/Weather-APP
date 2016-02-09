@@ -1,0 +1,105 @@
+body{
+	margin: 0px;
+	padding: 0px;
+font-family: Raleway;
+padding: 30px;
+background: url("../school.png");
+background-repeat: repeat;
+}
+
+.panel-default{
+	background: rgba(255,255,255,0.3);
+	transition:all 0.4s ease;
+}
+
+.panel-default:hover{
+	transform:translatey(-2px);
+	-webkit-box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
+
+
+}
+
+#lead{
+	
+		padding-bottom: 5px;
+	border-bottom: 2px solid #666;
+	
+	font-size:2.4em;
+}
+
+
+.panel{
+	border: 2px solid #bbb;
+	padding:20px;
+}
+
+.row{
+	margin-bottom: 30px;
+}
+
+#cityname{
+font-size: 1.6em;
+}
+
+.panel-body{
+	padding: 0px;
+}
+
+ul{
+	list-style-type:none; font-size:1.3em;
+
+	padding-left: 10px;
+}
+
+li:first-child{
+font-size: 1.4em;
+}
+.col-md-5{
+	padding: 10px;
+font-size: 2.9em;
+}
+
+.sunny{
+	background:url("http://www.suitsbysuits.com/assets/htmlimages/iStock_Sunny_Sky_with_Grass_000005407896Small.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+
+.cloudy{
+	background:url("https://c1.staticflickr.com/7/6023/5975465375_9c089b6085_b.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color:white;
+}
+
+
+.haze{
+	background:url("https://upload.wikimedia.org/wikipedia/commons/1/17/Haze_in_Kuala_Lumpur.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+
+.rainy{
+	background:url("http://lemerg.com/data/wallpapers/38/691720.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	color:white;
+}
+
+.snowy{
+	background:url("http://cdn1.theodysseyonline.com/files/2016/01/09/635879112155223228-319755513_635861833670816810507191518_6670-perfect-snow-1920x1080-nature-wallpaper.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.class{
+background: none;
+}
