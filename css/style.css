@@ -29,8 +29,30 @@ box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
 	font-size:2.4em;
 }
 
+.empty{
+	background: rgba(255,255,255,0.3);
+	border: 2px solid #bbb;
+	text-align: center;
+	font-size: 4.5em;
 
-.panel{
+	transition:all 0.23s ease;	
+	}
+	.empty:hover{
+		transform: translateY(-2px);
+	}
+
+a{
+	color:black;
+}
+a:hover{
+	text-decoration: none;
+	color: white;
+	
+}
+
+
+
+.panel {
 	border: 2px solid #bbb;
 	padding:20px;
 }
@@ -62,7 +84,7 @@ font-size: 2.9em;
 }
 
 .sunny{
-	background:url("http://www.suitsbysuits.com/assets/htmlimages/iStock_Sunny_Sky_with_Grass_000005407896Small.jpg");
+	background:url("http://i.giphy.com/vadsqiBwAM18c.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -70,7 +92,7 @@ font-size: 2.9em;
 
 
 .cloudy{
-	background:url("https://c1.staticflickr.com/7/6023/5975465375_9c089b6085_b.jpg");
+	background:url("http://i.giphy.com/UknxX483P7qkE.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 	color:white;
@@ -78,7 +100,7 @@ font-size: 2.9em;
 
 
 .haze{
-	background:url("https://upload.wikimedia.org/wikipedia/commons/1/17/Haze_in_Kuala_Lumpur.jpg");
+	background:url("http://i.giphy.com/10v3lzFmbemHv2.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
@@ -86,7 +108,7 @@ font-size: 2.9em;
 
 
 .rainy{
-	background:url("http://lemerg.com/data/wallpapers/38/691720.jpg");
+	background:url("http://i.giphy.com/11bKZchDgXQTZe.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -94,7 +116,7 @@ font-size: 2.9em;
 }
 
 .snowy{
-	background:url("http://cdn1.theodysseyonline.com/files/2016/01/09/635879112155223228-319755513_635861833670816810507191518_6670-perfect-snow-1920x1080-nature-wallpaper.jpg");
+	background:url("http://i.giphy.com/12RAfAXFH8g5LG.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
 
@@ -102,4 +124,8 @@ font-size: 2.9em;
 
 .class{
 background: none;
+}
+
+footer{
+	background: red;
 }

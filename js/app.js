@@ -1,9 +1,11 @@
 angular.module('weatherApp', [])
-  .controller('weatherController', function($scope, $http){
+  .controller('weatherController', function($scope, $http, $interval){
     
-    //getting data from openweathermapAPI
+    //getting data from openweathermapAPI and calling at 30 second intervals
+    $interval(
 
 	$scope.fetch = function(value) {
+		
 		
 		if(value==1)
 		
@@ -54,9 +56,12 @@ angular.module('weatherApp', [])
 			{ $scope.details = response.data; 	
 
 //Weather allotment based on keywords 
-
+	
 	$scope.weather = JSON.stringify($scope.details);
 	
+	if(!$scope.details) alert("please Enter a proper City Name");
+
+
 		if($scope.weather.match("haze") || $scope.weather.match("fog") || $scope.weather.match("smoke"))
 			{
 			$scope.class="haze";
@@ -143,7 +148,7 @@ angular.module('weatherApp', [])
 		});
 
 
-	} //end of fetch function
+	},30000); //end of fetch function
 
 
 
