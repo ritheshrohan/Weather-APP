@@ -45,6 +45,7 @@ angular.module('weatherApp', [])
 			}
 
 
+
 	var url1="http://api.openweathermap.org/data/2.5/weather?q=" + $scope.search + "&units=metric&APPID=7eb97e1e80a73c36c5ee2d2e49f5f398";
 
 
@@ -53,13 +54,27 @@ angular.module('weatherApp', [])
 	url: url1
 	})
 	.then(function(response)
-			{ $scope.details = response.data; 	
+			{ 
+	$scope.exist=0;
+	
+	$scope.details = response.data; 	
+
+	$scope.weather = JSON.stringify($scope.details).toLowerCase();
+	
+	//lowercase matching, since cities name might be given in Caps
+
+	var data=$scope.weather;
+	
+
+	var string=$scope.search;
+	string.toLowerCase();
+
+
+	if(data.match(string)) 
+	{	
 
 //Weather allotment based on keywords 
-	
-	$scope.weather = JSON.stringify($scope.details);
-	
-	if(!$scope.details) alert("please Enter a proper City Name");
+		$scope.exist=1;
 
 
 		if($scope.weather.match("haze") || $scope.weather.match("fog") || $scope.weather.match("smoke"))
@@ -145,10 +160,17 @@ angular.module('weatherApp', [])
 				$scope.class0=$scope.class;
 			}
 
-		});
 
+	}
+	else{
+		//City does not exist
+		$scope.exist=0;
 
-	},30000); //end of fetch function
+	}//end of main else
+
+}); //end of http.get function
+
+	},30000); //end of interval function
 
 
 

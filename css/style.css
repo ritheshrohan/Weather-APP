@@ -13,7 +13,7 @@ background-repeat: repeat;
 }
 
 .panel-default:hover{
-	transform:translatey(-2px);
+	transform:translatey(-1px);
 	-webkit-box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
 -moz-box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
 box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
@@ -37,8 +37,10 @@ box-shadow: -1px 0px 35px -12px rgba(0,0,0,0.75);
 
 	transition:all 0.23s ease;	
 	}
-	.empty:hover{
+.empty:hover{
+		
 		transform: translateY(-2px);
+		border: 2px solid white;
 	}
 
 a{
