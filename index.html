@@ -70,10 +70,11 @@
   
     <br />
 	
+
 <div ng-if="details0"> <!-- If details object has arrived, then Show-->
 
-	<div class="row">  	
-  	<div class="col-md-7">
+	<div class="row" ng-show="exist">  	
+  	<div class="col-md-7" >
   	<ul >
 <li>{{details0.name}}, {{details0.sys.country}}</li>
 <br />
@@ -82,14 +83,22 @@
   	</ul>
   	</div>
 
-  	<div class="col-md-5">
+  	<div class="col-md-5" >
   	<p>{{details0.main.temp}} &#8451;</p>
   	</div>
 
   	</div> <!--End of row -->
-  	</div> <!--end of IF DETAILS AVAILABLE -->
+  	 
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
+     
+
+    </div> <!--end of IF DETAILS AVAILABLE -->
 
   	</div><!-- End of panel body-->
+
 </div> <!-- End of panel default-->
 </div> <!-- End of col-md-4-->
 
@@ -126,7 +135,7 @@
 	
 <div ng-if="details1"> <!-- If details object has arrived, then Show-->
 
-	<div class="row">  	
+	<div class="row" ng-show="exist">  	
   	<div class="col-md-7">
   	<ul >
 <li>{{details1.name}}, {{details1.sys.country}}</li>
@@ -141,6 +150,13 @@
   	</div>
 
   	</div> <!--End of row -->
+
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
+
   	</div> <!--end of IF DETAILS AVAILABLE -->
 
   	</div><!-- End of panel body-->
@@ -179,7 +195,7 @@
 	
 <div ng-if="details2"> <!-- If details object has arrived, then Show-->
 
-	<div class="row">  	
+	<div class="row" ng-show="exist">   	
   	<div class="col-md-7">
   	<ul >
 <li>{{details2.name}}, {{details2.sys.country}}</li>
@@ -194,6 +210,13 @@
   	</div>
 
   	</div> <!--End of row -->
+
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
+
   	</div> <!--end of IF DETAILS AVAILABLE -->
 
   	</div><!-- End of panel body-->
@@ -239,7 +262,7 @@
   
 <div ng-if="details3"> <!-- If details object has arrived, then Show-->
 
-  <div class="row">   
+  <div class="row" ng-show="exist">   
     <div class="col-md-7">
     <ul >
 <li>{{details3.name}}, {{details3.sys.country}}</li>
@@ -254,6 +277,13 @@
     </div>
 
     </div> <!--End of row -->
+
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
+
     </div> <!--end of IF DETAILS AVAILABLE -->
 
     </div><!-- End of panel body-->
@@ -293,8 +323,8 @@
   
 <div ng-if="details4"> <!-- If details object has arrived, then Show-->
 
-  <div class="row">   
-    <div class="col-md-7">
+  <div class="row" ng-show="exist">   
+    <div class="col-md-7" >
     <ul >
 <li>{{details4.name}}, {{details4.sys.country}}</li>
 <br />
@@ -308,6 +338,12 @@
     </div>
 
     </div> <!--End of row -->
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
+
     </div> <!--end of IF DETAILS AVAILABLE -->
 
     </div><!-- End of panel body-->
@@ -346,7 +382,7 @@
   
 <div ng-if="details5"> <!-- If details object has arrived, then Show-->
 
-  <div class="row">   
+  <div class="row" ng-show="exist">   
     <div class="col-md-7">
     <ul >
 <li>{{details5.name}}, {{details5.sys.country}}</li>
@@ -361,6 +397,13 @@
     </div>
 
     </div> <!--End of row -->
+
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
+
     </div> <!--end of IF DETAILS AVAILABLE -->
 
     </div><!-- End of panel body-->
@@ -402,7 +445,7 @@
   
 <div ng-if="details6"> <!-- If details object has arrived, then Show-->
 
-  <div class="row">   
+  <div class="row" ng-show="exist">   
     <div class="col-md-7">
     <ul >
 <li>{{details6.name}}, {{details6.sys.country}}</li>
@@ -417,6 +460,11 @@
     </div>
 
     </div> <!--End of row -->
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
     </div> <!--end of IF DETAILS AVAILABLE -->
 
     </div><!-- End of panel body-->
@@ -456,7 +504,7 @@
   
 <div ng-if="details7"> <!-- If details object has arrived, then Show-->
 
-  <div class="row">   
+  <div class="row" ng-show="exist">   
     <div class="col-md-7">
     <ul >
 <li>{{details7.name}}, {{details7.sys.country}}</li>
@@ -471,6 +519,11 @@
     </div>
 
     </div> <!--End of row -->
+
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
     </div> <!--end of IF DETAILS AVAILABLE -->
 
     </div><!-- End of panel body-->
@@ -511,7 +564,7 @@
   
 <div ng-if="details8"> <!-- If details object has arrived, then Show-->
 
-  <div class="row">   
+  <div class="row" ng-show="exist">   
     <div class="col-md-7">
     <ul >
 <li>{{details8.name}}, {{details8.sys.country}}</li>
@@ -526,6 +579,11 @@
     </div>
 
     </div> <!--End of row -->
+    
+<div class="row" ng-show="!exist">
+     <center><p style="font-size:2em">Sorry, not Available :(</p></center>
+     </div>
+
     </div> <!--end of IF DETAILS AVAILABLE -->
 
     </div><!-- End of panel body-->
