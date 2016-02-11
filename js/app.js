@@ -56,34 +56,33 @@ angular.module('weatherApp', [])
 	.then(function(response)
 			{ 
 	$scope.exist=0;
-<<<<<<< HEAD
+
 
 	$scope.details = response.data; 	
 
-=======
+
 	
 	$scope.details = response.data; 	
 
->>>>>>> 53683e2474f58616f813686b012aedfbf68a07eb
+
 	$scope.weather = JSON.stringify($scope.details).toLowerCase();
 	
 	//lowercase matching, since cities name might be given in Caps
 
 	var data=$scope.weather;
-<<<<<<< HEAD
+
 	
 
 	var string=($scope.search).toLowerCase();
 	
 
-=======
-	
+
 
 	var string=$scope.search;
 	string.toLowerCase();
 
 
->>>>>>> 53683e2474f58616f813686b012aedfbf68a07eb
+
 	if(data.match(string)) 
 	{	
 
