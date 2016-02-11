@@ -56,7 +56,7 @@ angular.module('weatherApp', [])
 	.then(function(response)
 			{ 
 	$scope.exist=0;
-	
+
 	$scope.details = response.data; 	
 
 	$scope.weather = JSON.stringify($scope.details).toLowerCase();
@@ -66,9 +66,8 @@ angular.module('weatherApp', [])
 	var data=$scope.weather;
 	
 
-	var string=$scope.search;
-	string.toLowerCase();
-
+	var string=($scope.search).toLowerCase();
+	
 
 	if(data.match(string)) 
 	{	
